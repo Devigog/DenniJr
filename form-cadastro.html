@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Página de cadastro</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h2>Bem-vindo à página de cadastro de usuário</h2><br>
+    <form name="Cadastro" action="cadastro.php" method="POST">
+        <p><label>Nome: </label>
+        <input type="text" name="NomeUsuario" size="30"></p>
+        <p><label>Sobrenome: </label>
+        <input type="text" name="SobrenomeUsuario" size="40"></p>
+        <p><label>Sexo: </label>
+        <select name="SexoUsuario">
+            <option value="M">Masculino</option>
+            <option value="F">Feminino</option>
+            <option value="N">Não declarado</option>
+        </select></p>
+        <p><label>Estado: </label>
+        <input type="text" name="EstadoUsuario" size="25"></p>
+        <p><label>Email: </label>
+        <input type="text" name="EmailUsuario" size="30"></p>
+        <p><label>Senha: </label>
+        <input type="password" name="SenhaUsuario" size="30"></p>
+        <p><input type="submit" name="finalizar" value="Finalizar"></p>
+    </form>
+</body>
+</html>
