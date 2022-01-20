@@ -16,12 +16,20 @@
 		echo "<script type='text/javascript'>alert('Todos os campos devem ser preenchidos');window.location.href='form-cadastro.html'</script>";
 		
 	}else{
-		if($cont == 1) {
+		
+		if(strstr($nome, "@") == false){
+			
+		echo "<script type='text/javascript'>alert('O campo email deve ser preenchido corretamente!');window.location.href='form-login.html'</script>";
+		
+		}else{
+			if($cont == 1) {
 		
 			echo "<script type='text/javascript'>alert('Email já cadastrado!');window.location.href='form-cadastro.html'</script>";
-		}else{
+			
+			}else{
 			$sql = mysqli_query($conexao,$insert);
 			echo "<script type='text/javascript'>alert('Cadastro realizado com sucesso!');window.location.href='form-login.html'</script>";
+			
+			}
 		}
-		
 	}
